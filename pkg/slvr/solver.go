@@ -1,5 +1,5 @@
 package slvr
 
 type Solver interface {
-	Solve([]byte) []byte
+	Solve(data []byte) []byte
 }

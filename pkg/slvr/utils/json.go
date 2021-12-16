@@ -1,11 +1,11 @@
-package slvr
+package utils
 
 import (
 	"encoding/json"
 	"log"
 )
 
-func fromJson(data []byte, problem interface{}) {
+func FromJson(data []byte, problem interface{}) {
 	if data == nil {
 		log.Fatalln("Data is empty")
 	}
@@ -15,7 +15,7 @@ func fromJson(data []byte, problem interface{}) {
 	}
 }
 
-func toJson(sol interface{}) []byte {
+func ToJson(sol interface{}) []byte {
 	jsonBytes, err := json.Marshal(sol)
 	if err != nil {
 		log.Fatalf("Couldn't parse to json: %v", err)

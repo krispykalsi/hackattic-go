@@ -57,5 +57,10 @@ func (ha Client) Submit(ch ChallengeName, solution []byte) {
 		}
 	}(response.Body)
 
-	log.Printf("%s", response.Status)
+	data, err := io.ReadAll(response.Body)
+	if err != nil {
+		log.Printf("%s", response.Status)
+	} else {
+		log.Printf("%s\n%s", response.Status, string(data))
+	}
 }
