@@ -12,7 +12,7 @@ var haClient *ha.Client
 var solver slvr.Solver
 
 func init() {
-	challenge = ha.HelpMeUnpack
+	challenge = ha.MiniMiner
 	at := os.Getenv("HACKATTIC_ACCESS_TOKEN")
 
 	haClient = ha.NewClient(at)
